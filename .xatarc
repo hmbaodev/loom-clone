@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Hua-Minh-Bao-s-workspace-7am5qp.us-east-1.xata.sh/db/humiba_snapcast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
