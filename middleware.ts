@@ -3,14 +3,14 @@ import { headers } from "next/headers";
 
 import { auth } from "@/libs/auth";
 
-export async function middleware(request: NextRequest, response:NextResponse) {
+export async function middleware(request: NextRequest, response: NextResponse) {
   const session = await auth.api.getSession({
-    headers: await headers()
-  })
+    headers: await headers(),
+  });
 
   // if there's no any user sign in, direct them to sign in page
   if (!session) {
-    return NextResponse.redirect(new URL("/sign-in", request.url))
+    return NextResponse.redirect(new URL("/sign-in", request.url));
   }
 
   return NextResponse.next();
